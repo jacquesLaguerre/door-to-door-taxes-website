@@ -1212,3 +1212,37 @@ footer address small {
     padding-right: 0;
   }
 }
+
+/* --- FIX: Get Quote inputs overflowing --- */
+.get-quote form input,
+.get-quote form textarea {
+  box-sizing: border-box;
+}
+
+/* Keep the two inputs perfectly side-by-side */
+.get-quote form input.first,
+.get-quote form input.second {
+  width: 50%;
+  float: left;            /* matches how many themes do this layout */
+}
+
+/* create spacing without breaking width */
+.get-quote form input.first { padding-right: 10px; }
+.get-quote form input.second { padding-left: 10px; }
+
+/* ensure textarea clears the floats */
+.get-quote form textarea {
+  width: 100%;
+  clear: both;
+}
+
+/* Mobile: stack them */
+@media (max-width: 767px) {
+  .get-quote form input.first,
+  .get-quote form input.second {
+    width: 100%;
+    float: none;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
