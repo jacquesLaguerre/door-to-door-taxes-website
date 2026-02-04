@@ -1246,3 +1246,32 @@ footer address small {
     padding-right: 0;
   }
 }
+
+/* Force the two top inputs to align correctly */
+.get-quote form input.first,
+.get-quote form input.second{
+  display: inline-block !important;
+  width: 50% !important;
+  box-sizing: border-box !important;
+  vertical-align: top !important;
+  float: left !important;
+}
+
+.get-quote form input.first{ padding-right: 10px !important; }
+.get-quote form input.second{ padding-left: 10px !important; }
+
+.get-quote form textarea{
+  width: 100% !important;
+  box-sizing: border-box !important;
+  clear: both !important;
+}
+
+@media (max-width: 767px){
+  .get-quote form input.first,
+  .get-quote form input.second{
+    width: 100% !important;
+    float: none !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
