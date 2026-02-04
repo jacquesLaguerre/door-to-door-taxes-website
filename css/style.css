@@ -1275,3 +1275,29 @@ footer address small {
     padding-right: 0 !important;
   }
 }
+
+/* Keep name + email side-by-side on desktop, but make them full-width (stacked) on mobile */
+.get-quote form input,
+.get-quote form textarea {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Desktop/tablet: 2 columns */
+@media (min-width: 768px) {
+  .get-quote form input.first,
+  .get-quote form input.second {
+    width: 50%;
+    float: left;
+  }
+}
+
+/* Mobile: stack nicely like your first screenshot */
+@media (max-width: 767px) {
+  .get-quote form input.first,
+  .get-quote form input.second {
+    width: 100% !important;
+    float: none !important;
+    display: block;
+  }
+}
