@@ -1177,3 +1177,38 @@ footer address i,
 footer address small {
   color: #ffffff;
 }
+
+/* Fix Get Quote input alignment */
+.get-quote form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.get-quote input.first,
+.get-quote input.second {
+  width: 50%;
+  box-sizing: border-box;
+}
+
+.get-quote input.first {
+  padding-right: 10px;
+}
+
+.get-quote input.second {
+  padding-left: 10px;
+}
+
+/* Full width textarea */
+.get-quote textarea {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+@media (max-width: 767px) {
+  .get-quote input.first,
+  .get-quote input.second {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
